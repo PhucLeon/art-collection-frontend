@@ -23,7 +23,7 @@ import { addBookingFailed, addBookingStart, addBookingSuccess, deleteBookingFail
 export const loginUser = async (user, dispatch, navigate) => {
   dispatch(loginStart());
   try {
-    const res = await axios.post("https://phuc-api.kdigi.app/v1/auth/login", user);
+    const res = await axios.post("https://art-collection-api.onrender.com/v1/auth/login", user);
     dispatch(loginSuccess(res.data));
     navigate("/");
   } catch (err) {
